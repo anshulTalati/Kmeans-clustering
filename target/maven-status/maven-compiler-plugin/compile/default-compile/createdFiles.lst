@@ -1,0 +1,4 @@
+Point.class
+KMeans.class
+KMeans$AvgReducer.class
+KMeans$AvgMapper.class
