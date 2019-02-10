@@ -57,7 +57,7 @@ reduce ( c, points ):
   emit(c,null)
 In Java main program args[0] is the data point file (points-small.txt or points-large.txt), args[1] is the centroids.txt, args[2] is the output directory. job.addCacheFile(new URI(args[1])) is used to broadcast the file centroids.txt to all mappers, and Mapper.Context.getCacheFiles to access the broadcast file at the mapper setup (method setup):
                 
-                * URI[] paths = context.getCacheFiles();
+                  URI[] paths = context.getCacheFiles();
                 ``Configuration conf = context.getConfiguration();
                `` FileSystem fs = FileSystem.get(conf); 
                 ``BufferedReader reader = new BufferedReader(new InputStreamReader(fs.open(new Path(paths[0]))));
